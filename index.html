@@ -35,6 +35,12 @@ kaboom({
   global: true,
   plugins: [ peditPlugin, asepritePlugin, kbmspritePlugin ],
 });
+
+const isGitHubPages = window.location.hostname.includes("github.io");
+const repoName = "Snek";
+
+loadRoot(isGitHubPages ? `/${repoName}/` : "./");
+	  
 loadSprite("apple", "sprites/apple.png");
 loadSprite("background", "sprites/background.png");
 loadSprite("banana", "sprites/banana.png");
